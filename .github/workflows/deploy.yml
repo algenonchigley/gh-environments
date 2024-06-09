@@ -10,8 +10,8 @@ jobs:
   test:
     env:
       MONGODB_CLUSTER_ADDRESS: gha-demo.kzodu0f.mongodb.net
-      MONGODB_USERNAME: gha-demo
-      MONGODB_PASSWORD: ykm1uzh.gkd9qyd*TKB
+      MONGODB_USERNAME: ${{ secrets.MONGODB_USERNAME }}
+      MONGODB_PASSWORD: ${{ secrets.MONGODB_PASSWORD }}
       PORT: 8080
     environment: testing
     runs-on: ubuntu-latest
